@@ -2,7 +2,7 @@
   <div class="container">
     <div class="content">
       <AppInfo :allMovies="movies.length" :likedMovies="movies.filter(item=>item.like === true).length"/>
-      <SearchPanel @onSearch="onSearch" @filterMovies="onFilter" />
+      <SearchPanel @onSearch="onSearch" @filterMovies="onFilter" :filterName="filter"/>
       <MovieList :kinolar="FilteredMovies" @onToggle="onToggle" @onDelete="OnDelete" />
       <MovieAddForm @AddMovie="onAddMovie" />
     </div>
@@ -29,7 +29,7 @@ export default {
           name: "Taxtlar O'yini",
           viewers: 1243,
           like: false,
-          favourite: false
+          favourite: true
         },
         {
           id: 2,

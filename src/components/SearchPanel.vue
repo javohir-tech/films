@@ -1,7 +1,7 @@
 <template>
     <div>
         <input v-model="search" @input="onSearch" type="text" class="form-control p-3" placeholder="Qidirish...">
-        <FilterPanel @filter="filterMovie" />
+        <FilterPanel @filter="filterMovie" :filterName="filterName"/>
     </div>
 </template>
 <script>
@@ -22,6 +22,11 @@ export default {
         },
         filterMovie(filterType) {
             this.$emit('filterMovies', filterType)
+        }
+    },
+    props:{
+        filterName:{
+            type: String
         }
     }
 }

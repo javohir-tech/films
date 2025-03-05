@@ -5,11 +5,12 @@
                 <input v-model="name" type="text" class="form-control" placeholder="Kino Nomi">
                 <input v-model="viewers" type="number" class="form-control" placeholder="Nechi Marta Ko'rilgan">
             </div>
-            <button class="btn btn-success mt-3 w-100" type="submit">Qo'shish</button>
+            <SuccessButton class=" btn-success mt-3 w-100" type="submit">Qo'shish</SuccessButton>
         </form>
     </div>
 </template>
 <script>
+
 export default {
     data() {
         return {
